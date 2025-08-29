@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interval Training</title>
+  <link rel="stylesheet" href="practice.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.39/Tone.min.js"></script>
+</head>
+<body class="interval-page">
+  <div class="piano-container">
+    <div id="piano"></div>
+  </div>
+
+  <div class="container">
+    <div class="interval-card">
+      <h2>🎧 Interval Training</h2>
+      <p>Select the correct interval you hear:</p>
+
+      <button id="playBtn">▶️ Play Interval</button>
+
+      <form id="intervalForm">
+        <div class="options">
+          <label><input type="radio" name="interval" value="minor2" required /> Minor 2nd</label>
+          <label><input type="radio" name="interval" value="major2" /> Major 2nd</label>
+          <label><input type="radio" name="interval" value="minor3" /> Minor 3rd</label>
+          <label><input type="radio" name="interval" value="major3" /> Major 3rd</label>
+          <label><input type="radio" name="interval" value="perfect4" /> Perfect 4th</label>
+          <label><input type="radio" name="interval" value="perfect5" /> Perfect 5th</label>
+        </div>
+        <button type="submit">Submit Answer</button>
+      </form>
+
+      <p id="feedback" class="feedback"></p>
+      <a href="home.html" class="back-link">← Back to Home</a>
+    </div>
+  </div>
+
+  <script src="interval.js"></script>
+</body>
+</html>

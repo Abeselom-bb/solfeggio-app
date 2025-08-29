@@ -1,0 +1,149 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #2c2c4f, #6b5e84);
+  color: white;
+}
+
+.piano-container {
+  width: 100%;
+  overflow-x: auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(6px);
+}
+
+#piano {
+  display: flex;
+  position: relative;
+  height: 120px;
+  width: fit-content;
+}
+
+
+.white-key {
+  width: 40px;
+  height: 120px;
+  background: #fff;
+  border: 1px solid #ccc;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 10px;
+  color: #333;
+  box-sizing: border-box;
+  
+}
+
+
+.white-key::after {
+  content: attr(data-note);
+  position: absolute;
+  bottom: 4px;
+  font-size: 10px;
+  color: #444;
+}
+
+.black-key {
+  width: 25px;
+  height: 80px;
+  background: #000;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  left: calc(var(--i) * 40px + 28px);
+  border-radius: 0 0 3px 3px;
+}
+
+
+/* Correctly space black keys using index */
+.black-key {
+  --i: 0;
+  left: calc(var(--i) * 40px + 28px);
+}
+
+
+/* Positioning with index */
+.white-key {
+  --i: 0;
+  left: calc(var(--i) * 40px);
+}
+
+.black-key {
+  --i: 0;
+  left: calc(var(--i) * 40px + 28px);
+}
+
+/* Highlighting */
+.key.active {
+  background: yellow !important;
+}
+
+.key.hidden-note {
+  opacity: 0.4;
+}
+
+/* Interval Card Layout */
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.interval-card {
+  background: rgba(0, 0, 0, 0.65);
+  padding: 24px;
+  border-radius: 12px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* Button Styles */
+button {
+  background: #f6c350;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #f9a825;
+}
+
+.options {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.options label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.feedback {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.back-link {
+  display: block;
+  margin-top: 20px;
+  color: violet;
+  font-size: 14px;
+  text-decoration: none;
+}

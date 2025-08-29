@@ -1,0 +1,89 @@
+/* home.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #f8f9ff, #e2e6f2);
+  color: #2c2c2c;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #4b0082;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+p.tagline {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.button-group a,
+.level-buttons button {
+  background-color: #6a5acd;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.level-buttons button:hover,
+.button-group a:hover {
+  background-color: #5a4ac0;
+}
+
+.level-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.quick-links a {
+  display: inline-block;
+  margin-right: 12px;
+  text-decoration: none;
+  color: #483d8b;
+  font-weight: 500;
+}
+
+.quick-links a:hover {
+  text-decoration: underline;
+}
+
+.recommendation {
+  margin-top: 10px;
+  font-style: italic;
+  color: #333;
+}
+
+.logout-link {
+  margin-top: 30px;
+  display: inline-block;
+  color: #8b0000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.logout-link:hover {
+  text-decoration: underline;
+}

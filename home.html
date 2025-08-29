@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solfeggio Trainer</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="home.css" />
+
+</head>
+<body class="home-page">
+  <div class="piano-bg"></div>
+
+  <div class="container">
+    <div class="welcome-card">
+      <h1>🎶 Welcome back, [Username]!</h1>
+      <p class="tagline">Sharpen your ears. Train your pitch. Embrace the harmony.</p>
+
+      <div class="dashboard">
+        <section class="level-section">
+          <h2>🎼 Choose Your Level</h2>
+          <div class="level-buttons">
+            <button class="btn">Beginner</button>
+            <button class="btn">Intermediate</button>
+            <button class="btn">Advanced</button>
+          </div>
+        </section>
+
+        <section class="progress-section">
+          <h2>📊 Your Progress</h2>
+          <p>Training Sessions Completed: 4</p>
+          <p>Accuracy Score: 78%</p>
+        </section>
+
+        <section class="quick-access">
+          <h2>🎯 Quick Exercises</h2>
+          <div class="exercise-links">
+            <a href="interval.html">🎵 Interval Training</a>
+            <a href="#" class="btn secondary">🎶 Melody Replay</a>
+            <a href="#" class="btn secondary">🎧 Chord Recognition</a>
+          </div>
+        </section>
+
+        <section class="recommendation">
+          <h2>🧠 Recommended for You</h2>
+          <p>Based on your quiz results, we suggest starting with Interval Training Basics and Solfeggio Warmups.</p>
+        </section>
+      </div>
+
+      <div class="button-group">
+        <a href="login.html" class="btn">Log Out</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Replace [Username] with actual name
+    document.querySelector('h1').innerHTML = `🎶 Welcome back, ${localStorage.getItem('username') || 'Musician'}!`;
+  </script>
+</body>
+</html>
